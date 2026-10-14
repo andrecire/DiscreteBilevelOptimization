@@ -97,7 +97,7 @@ The main classes are:
 - `BilevelBOBILIB_DISCRETE.Main`
 - `BilevelBOBILIB_MIXED.Main`
 
-The repository provides source code, not prebuilt solver JARs. If you export runnable JARs named `dd_solver_discrete.jar` and `dd_solver_mixed.jar`, configure their main classes and runtime dependencies before using the commands below.
+The repository provides the necessary source code to build the solver JARs. If you export runnable JARs named `dd_solver_discrete.jar` and `dd_solver_mixed.jar`, please configure their main classes and runtime dependencies before using the commands below.
 
 ### Running the solver
 
