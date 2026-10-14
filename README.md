@@ -189,6 +189,8 @@ jupyter notebook analysis.ipynb
 
 The CSVs support analysis of the recorded experiments without rerunning the optimization solvers. Repeating the solver experiments requires the original benchmark instances and the solver dependencies described above.
 
+If you encounter any issues, have concerns, or find errors in the code or results, please contact the authors or [open a GitHub issue](https://github.com/andrecire/DiscreteBilevelOptimization/issues); we are happy to help.
+
 ## Citation
 
 Please cite the paper when using this code or these results:
