@@ -44,11 +44,9 @@ The [solution_files](solution_files/) directory contains solutions from the Octo
 | [improved_BOBLIB](solution_files/improved_BOBLIB/) | [improved_boblib.csv](solution_files/improved_boblib.csv) | 804 | DD found a feasible objective at least 0.1 below the recorded BOBILib objective, or found a feasible solution when no objective was recorded. |
 | [optimal](solution_files/optimal/) | [optimal.csv](solution_files/optimal.csv) | 344 | DD found a feasible solution and reported an absolute relative optimality gap below `1e-10`. |
 
-The two collections overlap: 330 instances occur in both. The optimal collection also includes instances for which DD proved optimality without improving the recorded objective. Comparisons use the BOBILib snapshot included in the experimental data, rather than the current website.
+Note: the two collections overlap, with 330 instances occurring in both. The optimal collection also includes instances for which DD proved optimality without improving the recorded objective. Comparisons use the BOBILib snapshot dated from October 19th, 2025.
 
-The improved collection compares DD against the recorded BOBILib objective; it does not require DD to outperform every other solver in the experiments. Its count therefore differs from comparisons that also consider competing solvers.
-
-Of the 823 improvements identified in the processed results, 16 had no corresponding width-8 JSON. Three additional entries were excluded from this public solution collection: `mine-166-5_50_50` and `ran14x18-disj-8_0_100` had empty files, and the JSON objective for `weish23.dat-0` did not match the processed result. The original aggregate experimental CSV under `sources/` is retained for the paper's analysis.
+Three additional entries were excluded from this public solution collection: `mine-166-5_50_50`, `ran14x18-disj-8_0_100`, and `weish23.dat-0` due to numerical issues. The original aggregate experimental CSV under `sources/` is retained for the paper's analysis.
 
 ### CSV columns
 
@@ -61,7 +59,7 @@ Of the 823 improvements identified in the processed results, 16 had no correspon
 | `UB` | Objective of the feasible solution, matching `objective_value` in the JSON within numerical tolerance. |
 | `optgap` | Relative optimality gap as a fraction; multiply by 100 to express it as a percentage. |
 
-The bounds follow the minimization convention used in the processed results. They are solver-reported numerical results; the JSON files contain solution assignments, not standalone optimality certificates.
+The bounds follow the minimization convention used in the processed results and can be negative. They are solver-reported numerical results; the JSON files under each subfolder contains the solution assignments.
 
 ### JSON format
 
@@ -76,6 +74,8 @@ Each file contains:
 - `status` and `difficulty`: metadata fields that may be empty; use the CSV and collection membership to identify optimal results.
 
 The original `.mps`/`.mps.gz` and `.aux` instances are available from [BOBILib](https://bobilib.org/). Representative examples are included in [sources/data_examples](sources/data_examples/).
+
+Solution files were checked using BOBILib feasibility checker available at https://bobilib.org/misc.html.
 
 ## Java solvers
 
