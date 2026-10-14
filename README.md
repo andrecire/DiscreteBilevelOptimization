@@ -189,7 +189,7 @@ jupyter notebook analysis.ipynb
 
 The CSVs support analysis of the recorded experiments without rerunning the optimization solvers. Repeating the solver experiments requires the original benchmark instances and the solver dependencies described above.
 
-Please feel free to reach out to us with any questions, concerns, or errors you notice in the code or results—we would be happy to hear from you and help.
+Please feel free to reach out to us with any questions, concerns, or errors you notice in the code or results; we would be happy to hear from you, help, and make corrections.
 
 ## Citation
 
